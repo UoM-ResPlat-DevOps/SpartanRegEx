@@ -47,6 +47,7 @@ Part 4: RegEx in Other Languages
 -- *Slide End* --
 
 -- *Slide* --
+# Part 1: Reporting with with `awk`
 * As a data driven programming language `awk` is particularly good at understanding and manipulating text structured by fields - such as tables of rows and columns. 
 * The organisation of an `awk` program follows the form: pattern { action }. This is sometimes structured with BEGIN and END which specify actions to be taken before any lines are read, and after the last line is read. 
 * The easiest and certainly one of the most common uses of awk is create reports from structured data; columns and rows are referenced by number and by default the space acts as the delimiter.
@@ -54,14 +55,46 @@ Part 4: RegEx in Other Languages
 -- *Slide End* --
 
 -- *Slide* --
-# Basic and Extended Regular Expressions
-
+# Part 2: BRE and SRE
+* POSIX has three sets of RegEx standards, BRE (Basic Regular Expressions), ERE (Extended Regular Expressions) and SRE (Simple Regular Expressions). SRE is deprecated.
+* ERE adds the '?', '+', and '|' metacharacters, and it removes the need to escape the metacharacters '(' ')' and '{' '}', which is required in BRE. 
+* ERE can be invoked with `grep -E`, `sed -r`. Examples in `/usr/local/common/BREandERE.md`
 -- *Slide End* --
 
+-- *Slide* --
+# Part 2: Perl Regular Expressions 
+* Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
+* Examples in `/usr/local/common/perl.md`
+-- *Slide End* --
 
+-- *Slide* --
+<img src="https://imgs.xkcd.com/comics/regular_expressions.png" />
+-- *Slide End* --
+
+-- *Slide* --
+# Part 2: Perl Compatible Regular Expressions
+* Perl Compatible Regular Expressions (PCRE) . Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. Not the default in Perl! From Perl 5.10, PCRE is available as a replacement for Perl's default regular expression engine.
+* Functionality includes Just-in-time compiler support, flexible memory management, consistent escaping rules, extended character classes, minimal matching, unicode character support, etc.
+* Examples in `/usr/local/common/pcre.md`
+-- *Slide End* --
+
+-- *Slide* --
+# Part 3: RegEx and Shell Scripting
+* Core components of shell scripting; variables, loops, conditinals, functions.
+* Incorporating `grep`, `sed` and `awk` into shell scripts. Examples.
+-- *Slide End* --
+
+-- *Slide* --
+<img src="https://imgs.xkcd.com/comics/regex_golf.png" />
+-- *Slide End* --
 
 -- *Slide* --
 -- *Slide End* --
+
+-- *Slide* --
+-- *Slide End* --
+
+
 
 -- *Slide* --
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />
