@@ -7,11 +7,19 @@ Part 4: RegEx in Other Languages
 -- *Slide End* --
 
 -- *Slide* --
-### Slide Respository
+# Slide Respository
 * A copy of these slides and sample code is available at: `https://github.com/UoM-ResPlat-DevOps/RegEx`
 * A copy of information about HPC at the University of Melbourne is available at `https://dashboard.hpc.unimelb.edu.au`. See also `man spartan` on the cluster and the `/usr/local/common/` directories for more help and code exammples.
 * Help is available at: `hpc-support@unimelb.edu.au`. Other courses also conducted by Research Platforms.
 * Terminal projection via https://shellshare.net/
+-- *Slide End* --
+
+-- *Slide* --
+# Part 1: UNIX loves Text
+The string is a stark data structure and 
+everywhere it is passed there is much duplication of process. 
+It is a perfect vehicle for hiding information. 
+--Alan Perlis
 -- *Slide End* --
 
 -- *Slide* --
@@ -26,7 +34,7 @@ Part 4: RegEx in Other Languages
 # Part 1: Metacharacters
 * A major feature of RegEx is the use of *metacharacters*, which have a special meaning to the RegEx application over and above their literal meaning. Metacharacters must be escape with a backslash.
 * The entire suite of metacharacters that require an escape include: "(", "{" "}", ")", "^", "$", ".", "|", "?", "*", "+", "\".
-* In addition to metacharacters there are RegEx classes which convert RegEx ranges into matched set.
+* In addition to metacharacters there are RegEx classes which convert RegEx ranges into matched set. Classes have their own (- ^) metacharacters!
 * There is a list of sample metacharacter examples and classes in `/usr/local/common/RegEx/basicmeta.md`
 -- *Slide End* --
 
@@ -62,7 +70,24 @@ Part 4: RegEx in Other Languages
 -- *Slide End* --
 
 -- *Slide* --
-# Part 2: Perl Regular Expressions 
+# Part 2: Shells and Shell Scripting
+* Variety of shells; sh, bash, csh, tcsh, ksh, zsh, fish, nadvsh. Environment modification. 
+* Shell scripting allows for automation; variables, loops, conditionals, functions.
+* Examples in `/usr/common/HPCshells`
+-- *Slide End* --
+
+-- *Slide* --
+# Part 2: Shell Scripting with RegEx
+* Incorporating `grep`, `sed` and `awk` into shell scripts. 
+-- *Slide End* --
+
+-- *Slide* --
+<img src="https://imgs.xkcd.com/comics/regex_golf.png" />
+-- *Slide End* --
+
+-- *Slide* --
+# Part 3: Perl Regular Expressions 
+* Perl is largely derived from `sed`, `awk`, shell scripting, but also with programming functions. 
 * Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
 * Examples in `/usr/local/common/perl.md`
 -- *Slide End* --
@@ -72,21 +97,13 @@ Part 4: RegEx in Other Languages
 -- *Slide End* --
 
 -- *Slide* --
-# Part 2: Perl Compatible Regular Expressions
-* Perl Compatible Regular Expressions (PCRE) . Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. Not the default in Perl! From Perl 5.10, PCRE is available as a replacement for Perl's default regular expression engine.
+# Part 3: Perl Compatible Regular Expressions
+* Perl Compatible Regular Expressions (PCRE) . Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. 
+* Not the default in Perl! From Perl 5.10, PCRE is available as a replacement for Perl's default regular expression engine.
 * Functionality includes Just-in-time compiler support, flexible memory management, consistent escaping rules, extended character classes, minimal matching, unicode character support, etc.
 * Examples in `/usr/local/common/pcre.md`
 -- *Slide End* --
 
--- *Slide* --
-# Part 3: RegEx and Shell Scripting
-* Core components of shell scripting; variables, loops, conditinals, functions.
-* Incorporating `grep`, `sed` and `awk` into shell scripts. Examples.
--- *Slide End* --
-
--- *Slide* --
-<img src="https://imgs.xkcd.com/comics/regex_golf.png" />
--- *Slide End* --
 
 -- *Slide* --
 -- *Slide End* --
@@ -99,6 +116,21 @@ Part 4: RegEx in Other Languages
 -- *Slide* --
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />
 -- *Slide End* --
+
+
+Part 2: Advanced Tools
+* POSIX standards. for Basic and Extended Regular Expressions (BRE, ERE). New meta-characters, escape rules.  
+* Invoking tools with ERE. Comparison and examples of BRE and ERE.
+* Perl Regular Expressions. Additional functionality to POSIX. Use on other languages. Examples.
+* Perl Compatible Regular Expressions (PCRE). Relationship with Perl. Advanced functionality. Examples.
+
+Part 3: Shell Scripting with RegEX
+* Core components of shell scripting; variables, loops, conditionals, functions.
+* Incorporating `grep`, `sed`, and `awk` into shell-scripts. Examples.
+
+Part 4: Perl Programs with RegEx
+* Arrays, scalars, loops, conditionals, subroutines. Bioinformatics examples.
+* Object-orientation, data structures, databases. Bioinformatics examples.
 
 
 
