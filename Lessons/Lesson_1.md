@@ -47,38 +47,39 @@ It is a perfect vehicle for hiding information.
 
 -- *Slide* --
 # Part 1: Editing with `sed`
-* As the name implies `sed` is a *stream editor*, which means it takes a data stream in a non-interactive mode, conducts a regular expression, and sends it to standard output. 
+* As the name implies `sed` is a *stream editor*. It takes a data stream, conducts a regular expression, and sends it to standard output. 
 * The general form is `sed [OPTION] [SCRIPT] [INPUT]`. Common options are `e` (multiple scripts per command), `-f` (add script file) and `-i` (in-place editing).
 * The general form of a script is `Command/RegExp/Replacement/Flags`. A common command is `s` for `substitute`, common flags are `g` for global replacement thoughout each line and `I` to ignore case. 
 * Examples of `sed` are available at `/usr/local/common/RegEx/basicsed.md`
-* Sed has alternative three alternative delimiters in its scripts; '/', ':', or '|'
+* A collection of `sed` one-liners are at: `http://sed.sourceforge.net/sed1line.txt`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 1: Reporting with with `awk`
-* As a data driven programming language `awk` is particularly good at understanding and manipulating text structured by fields - such as tables of rows and columns. 
-* The organisation of an `awk` program follows the form: pattern { action }. This is sometimes structured with BEGIN and END which specify actions to be taken before any lines are read, and after the last line is read. 
-* The easiest and certainly one of the most common uses of awk is create reports from structured data; columns and rows are referenced by number and by default the space acts as the delimiter.
-* Sample `awk` scripts are available at: `/usr/local/common/basicawk.md`, and a collection of `awk` one-liners are at: `http://www.pement.org/awk/awk1line.txt`
+* As a data driven programming language `awk` is particularly good at understanding and manipulating structured text.
+* An `awk` program follows the form: `pattern { action }`, sometimes structured with BEGIN and END to specify actions to be taken before any lines are read, and after the last line is read. 
+* Sample `awk` scripts are available at: `/usr/local/common/basicawk.md`
+* A collection of `awk` one-liners are at: `http://www.pement.org/awk/awk1line.txt`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 2: BRE and SRE
 * POSIX has three sets of RegEx standards, BRE (Basic Regular Expressions), ERE (Extended Regular Expressions) and SRE (Simple Regular Expressions). SRE is deprecated.
 * ERE adds the '?', '+', and '|' metacharacters, and it removes the need to escape the metacharacters '(' ')' and '{' '}', which is required in BRE. 
-* ERE can be invoked with `grep -E`, `sed -r`. Examples in `/usr/local/common/BREandERE.md`
+* ERE can be invoked with `grep -E` and `sed -r` or `sed -E`. Examples in `/usr/local/common/RegEx/BREandERE.md`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 2: Shells and Shell Scripting
 * Variety of shells; sh, bash, csh, tcsh, ksh, zsh, fish, nadvsh. Environment modification. 
 * Shell scripting allows for automation; variables, loops, conditionals, functions.
-* Examples in `/usr/common/HPCshells`
+* Examples in `/usr/common/common/RegEx/scripting.md`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 2: Shell Scripting with RegEx
 * Incorporating `grep`, `sed` and `awk` into shell scripts. 
+
 -- *Slide End* --
 
 -- *Slide* --

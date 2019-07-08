@@ -1,4 +1,18 @@
-Some basic metacharacter examples.
+Introduction
+------------
+
+Metacharacters are heavily used in regular expressions.
+
+The principle of a meta-character is that certain characters have an additional meaning above their literal meaning.
+
+Note that metacharacters will *vary* according to the context they are used. The metacharacters used in grep and sed are not the same that are used in the shell.
+
+Like other *nix-like system this environment is case-sensitive. Metacharacters that are used outside of their context, even within a regular expression, will be treated as literal character.
+
+Basic Examples
+--------------
+
+Note that the examples use strong quotes for search term to prevent the possibility of inadvertant shell expansion.
 
 | Metacharacter | Explanation         			| Example                                       |
 |:--------------|:--------------------------------------|-----------------------------------------------|
@@ -14,7 +28,11 @@ Some basic metacharacter examples.
 | \             | Escape a metacharacter 		| `grep '^A\.$' /usr/share/dict/words`		|
 | \<  \>	| Beginning and end word boundaries	| `grep '\<cat\>' /usr/share/dict/words`	| 
 
-Same basic metacharacter classes, a range statement. e.g., [[:alpha:]] is the equivalent of the range [A-Za-z], or [:punct:] is equivalent of '][!"#$%&'()*+,./:;<=>?@\^_`{|}~-].
+
+Range Statements
+----------------
+
+A range statement. e.g., [[:alpha:]] is the equivalent of the range [A-Za-z], or [:punct:] is equivalent of '][!"#$%&'()*+,./:;<=>?@\^_`{|}~-].
 
 Note that within POSIX these must be encapsulated within square brackets e.g., [[:digit]].
 

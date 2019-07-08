@@ -1,3 +1,5 @@
+
+
 As a data driven programming language `awk` is particularly good at understanding and manipulating text structured by fields - such as tables of rows and columns. 
 
 The organisation of an AWK program follows the form: pattern { action }. This is sometimes structured with BEGIN and END which specify actions to be taken before any lines are read, and after the last line is read. 
@@ -23,3 +25,11 @@ Other useful awk one-liners make use of the arithmetic functions of this program
 * Print the sum of the fields (columns) of every line (row); NF is number of field.    
 `awk '{sum=0; for (i=1; i<=NF; i++) sum=sum+$i; print sum}' $file`	
 
+AWK example Loops and Calculation
+=================================
+
+From Supercomputing with Linux, Lev Lafayette, VPAC, 2015
+
+awk '$7=="A" { ++count } END { print count }' simple1.txt
+awk '{sum+=$7} END {print sum}' simple2.txt
+awk '{ for(i=1; i<=NF;i++) j+=$i; print j; j=0 }' simple3.txt
