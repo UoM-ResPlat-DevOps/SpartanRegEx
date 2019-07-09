@@ -12,7 +12,7 @@ Like other *nix-like system this environment is case-sensitive. Metacharacters t
 Basic Examples
 --------------
 
-Note that the examples use strong quotes for search term to prevent the possibility of inadvertant shell expansion.
+Note that the examples use strong quotes for search term to prevent the possibility of inadvertant shell expansion. If shell expansion, variable substitution etc is desired then use weak quotes.
 
 | Metacharacter | Explanation         			| Example                                       |
 |:--------------|:--------------------------------------|-----------------------------------------------|
