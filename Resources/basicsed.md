@@ -122,3 +122,12 @@ Multiple commands in sed can be applied with the -e option or with semi-colon se
 The following selectively prints lines 1,2 and 5,6.
 
 sed -n '1,2p; 5,6p' file or `sed -n -e '1,2p' -e '5,6p' file`  
+
+Backreferences
+==============
+
+Like the ampersand metacharacter, a backreference defines a region in a search and then allows that region to be backreferenced. 
+
+Regions are established by parentheses and then referenced by \1, \2 etc. For example;
+
+`sed -E 's/([A-Z]*)([A-Z]*)([A-Z]*)/First Column \1 Second Column \2 Third Column \3/' gattaca.txt`
