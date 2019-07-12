@@ -79,7 +79,6 @@ It is a perfect vehicle for hiding information.
 -- *Slide* --
 # Part 2: Shell Scripting with RegEx
 * Incorporating `grep`, `sed` and `awk` into shell scripts. 
-
 -- *Slide End* --
 
 -- *Slide* --
