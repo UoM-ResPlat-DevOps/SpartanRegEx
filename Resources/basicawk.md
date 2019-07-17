@@ -39,6 +39,11 @@ A matched pattern in a line can be printed:
 `awk '/ATVK/ {print $0}' gattaca.txt`
 `awk '/ATVK/ {print $2}' gattaca.txt`
 
+The usual metacharacters can be used.
+
+`awk '/^ATVK/' gattaca.txt`
+`awk '/QLQA$/' gattaca.txt`
+
 The inbuilt `length` command can be used to print lines of a particular length. Note the double equals syntax.
 
 `awk 'length($0) == 28' gattaca.txt`
@@ -46,6 +51,7 @@ The inbuilt `length` command can be used to print lines of a particular length. 
 # `awk '{ if (((length($1) == 10 ) && length($2) == 10) && (length($3) == 10 || length($3) == 5)) && length($4) == 10)) && length($5) == 10)) print }' gattaca.txt`
 
 Whereas row numbers are specified by $num, 'NR' specifies the row number. More examples:
+
 `awk -F"," 'END {print NR}' quakes.csv`    
 `awk -F"," 'NR>1{print $3 "," $2 "," $1}' quakes.csv`   
 `awk -F"," '(NR <2) || (NR!=6) && (NR<9)' quakes.csv > selection.txt`   
@@ -64,7 +70,7 @@ Variable assignment in awk is done with the -v option.
 
 `awk -v filename="test-high-gc-1.fasq" -v linecount="4000" 'BEGIN{print filename, linecount}'`
 
-The shell function eval can be used for output e.g.,
+The shell function `eval` can be used for output e.g.,
 
 Integrating shell commans with awk for output.
 
@@ -75,6 +81,19 @@ Any global variables and their values being used by awk can be accessed by the -
 
 `awk --dump-variables ''`
 `less awkvars.out`
+
+The ARGC variable can hold the number arguments provided at the command-line, but keep in mind that indicies begin at zero. e.g.,
+
+`awk 'BEGIN {print "Arguments =", ARGC}' TGGA GTCA GGTA TCAC`
+
+To check this, use ARGV that can display the array of the arguments.
+
+'awk 'BEGIN {for (i = 0; i < ARGC - 1; ++i) { printf "ARGV[%d] = %s\n", i, ARGV[i]  } }' TGGA GTCA GGTA TCAC`
+
+Environment variables can be invoked with the ENVIRON array.
+
+`awk 'BEGIN { print ENVIRON["USER", "HOME"] }'`
+`awk 'BEGIN { print ENVIRON["HOME"] }'`
 
 Arithmetic Functions
 ===================-

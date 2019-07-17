@@ -1,6 +1,7 @@
 -- *Slide* --
 # Goals for today
 Part 1: Basic RegEx: grep, sed, awk
+Part 2: Advanced RegEx: scripting and awk programs
 Part 2: Extending and Scripting Regular Expressions
 Part 3: Programming RegEx with perl
 Part 4: RegEx in Other Languages
@@ -104,33 +105,37 @@ It is a perfect vehicle for hiding information.
 * Examples in `/usr/local/common/pcre.md`
 -- *Slide End* --
 
-
 -- *Slide* --
+# Part 4: RegEx in Python
 -- *Slide End* --
 
 -- *Slide* --
+# Part 4: RegEx in Java
 -- *Slide End* --
 
+-- *Slide* --
+# Part 4: RegEx in PHP
+-- *Slide End* --
+
+-- *Slide* --
+# Part 4: RegEx in Other Languaes
+* Ruby
+* Javascript
+* XML-Schema
+* SQL
+-- *Slide End* --
+
+-- *Slide* --
+# Part 4: RegEx in Other Languaes
+* Pascal
+* & more!
+-- *Slide End* --
 
 
 -- *Slide* --
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />
 -- *Slide End* --
 
-
-Part 2: Advanced Tools
-* POSIX standards. for Basic and Extended Regular Expressions (BRE, ERE). New meta-characters, escape rules.  
-* Invoking tools with ERE. Comparison and examples of BRE and ERE.
-* Perl Regular Expressions. Additional functionality to POSIX. Use on other languages. Examples.
-* Perl Compatible Regular Expressions (PCRE). Relationship with Perl. Advanced functionality. Examples.
-
-Part 3: Shell Scripting with RegEX
-* Core components of shell scripting; variables, loops, conditionals, functions.
-* Incorporating `grep`, `sed`, and `awk` into shell-scripts. Examples.
-
-Part 4: Perl Programs with RegEx
-* Arrays, scalars, loops, conditionals, subroutines. Bioinformatics examples.
-* Object-orientation, data structures, databases. Bioinformatics examples.
 
 
 
