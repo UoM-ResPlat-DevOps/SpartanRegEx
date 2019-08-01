@@ -20,6 +20,8 @@ grep '^Geoff\|^Jeff' /usr/share/dict/words
 Extended Regular Expressions
 ============================
 
+The Free Software Foundation (FSF) through the GNU (GNU's Not UNIX) utilities extended the basic regular expressions to give additional characters special meaning (i.e., more metacharacters). GNU built on the POSIX tools so that BREs will provide ERE functionality when a backslash is invoked, whereas EREs require the backslash to suppress the metacharacter functionality. 
+
 Extended grep does not need the escape sequence. This is sometimes applied as egrep; it does the same thing in recent versions of the bash shell.
 
 grep -E '^Geoff|^Jeff' /usr/share/dict/words
@@ -83,4 +85,13 @@ sed -e 's/\(.*\)/\1EXTRA TEXT/'
 The awk programming language and ERE
 ====================================
 
-The awk language uses the ERE engine to process regular expression patterns.
+Contemporary implementations of awk language uses the ERE engine to process regular expression patterns.
+
+Note there are slight variations in different implementations of the awk programming language which can have significant effects.
+
+For example, if an escape character precedes a character that is not a regular expression, most version of awk will ignore it. Others however, will treate the backslash as a little character and include it.
+
+For example:
+
+`awk '/QL\QA$/' gattaca.txt` will be treated like `awk '/QLQA$/' gattaca.txt` in most contemporary versions of awk. Some however will treat `awk '/QL\QA$/' gattaca.txt` and `awk '/QL\\QA$/' gattaca.txt` as equivalent.
+
