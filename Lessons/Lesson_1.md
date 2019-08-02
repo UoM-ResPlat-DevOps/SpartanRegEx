@@ -79,7 +79,8 @@ It is a perfect vehicle for hiding information.
 
 -- *Slide* --
 # Part 2: Shell Scripting with RegEx
-* Incorporating `grep`, `sed` and `awk` into shell scripts. 
+* Incorporating `grep`, `sed` and `awk` into shell scripts.
+* Remember `awk` is a fully-fledged programming language. See `/usr/local/common/RedEx/advawk.md`
 -- *Slide End* --
 
 -- *Slide* --
