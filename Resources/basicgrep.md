@@ -32,6 +32,17 @@ Examples:
 `time LC_ALL=C grep searchterm *`
 `time grep -F searchterm *`
 
+Multiple Greps
+--------------
+
+* The option `-l` with grep will print only the name of the each input file which matches the regular expression. This can be used with xargs to search multiple files for multiple search terms.
+
+Example:
+
+Search through a directory of build scripts for those files that use the Tarball block, have an installstep parameter, and use the dummy toolchain.
+
+grep -l 'Tarball' * -R | xargs grep -l 'installstep' | xargs grep -l 'dummy'
+
 Parallel Grep
 -------------
 

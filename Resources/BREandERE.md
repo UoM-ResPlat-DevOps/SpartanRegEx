@@ -69,7 +69,7 @@ sed -E 's/QQLQ?//' gattaca.txt
 Backreferences
 =============
 
-Regular expressions can also backreference, that is match a previous sub-expression with the values \1, \2, etc. The following is a useful example where one can search for any word (case-insensitive, line-numbered) and see if that word is repeated, catching common typing errors such as 'The the'. 
+Regular expressions can also backreference (which is technically beyond being a regular language), that is match a previous sub-expression with the values \1, \2, etc. The following is a useful example where one can search for any word (case-insensitive, line-numbered) and see if that word is repeated, catching common typing errors such as 'The the'. 
 
 grep -inw '\([a-z]\+\) \+\1' files
 
@@ -80,7 +80,6 @@ grep -Ein '\<([a-z]+) +\1\>' files
 An example to append the string "EXTRA TEXT" to each line.
 
 sed -e 's/\(.*\)/\1EXTRA TEXT/'
-
 
 The awk programming language and ERE
 ====================================

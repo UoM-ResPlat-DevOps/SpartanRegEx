@@ -26,7 +26,7 @@ It is a perfect vehicle for hiding information.
 -- *Slide* --
 # Part 1: What Are Regular Expressions?
 * Regular Expressions ("RegEx") are a general pattern notations that provides the means for efficient and effective text processing. 
-* Major initial formal development by Stephen Cole Kleene as a mathematical "Regular Language" in 1951, located as a Type-3 grammar in Chomsky's 1956 hierarchy.
+* Major initial formal development by Stephen Cole Kleene as a mathematical "Regular Language" in 1951, located as a Type-3 grammar in Chomsky's 1956 hierarchy. RegExes are "not quite" the same as "RegLang", but are related.
 * First major computational use was in 1968 with pattern matching in the QED text editor and, independently in the same year, in compiler design. The regular expression system in QED was ported to `ed` in 1969.
 * Main tools for regular expressions are `grep` (1974), `sed` (1974), `awk` (1977), and `perl` (1987).
 -- *Slide End* --
@@ -68,6 +68,17 @@ It is a perfect vehicle for hiding information.
 * POSIX has three sets of RegEx standards, BRE (Basic Regular Expressions), ERE (Extended Regular Expressions) and SRE (Simple Regular Expressions). SRE is deprecated.
 * ERE adds the '?', '+', and '|' metacharacters, and it removes the need to escape the metacharacters '(' ')' and '{' '}', which is required in BRE. 
 * ERE can be invoked with `grep -E` and `sed -r` or `sed -E`. Examples in `/usr/local/common/RegEx/BREandERE.md`
+-- *Slide End* --
+
+-- *Slide* --
+# Part 2: Warning! Limitations of Regular Expressions
+* A regular expression is limited by a finite number of internal states and termination states. A lot of code (e.g., html), scripts, or programming languages, that can nest arbitrarily deep, and the expression will need to have a means to recall the previous elements that it has opened (in html, for example). 
+* This said, arbitrary elements can be parsed with a regular expression. It requires several steps and will probably require some hand-editing. Works OK for small-scale changes! e.g., `http://levlafayette.com/node/128`
+* Consider using a language-approriate parser instead (e.g., HTML Tidy, lex/yacc/bison, ANTLR etc)
+-- *Slide End* --
+
+-- *Slide* --
+<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/regexhtml.png" /> 
 -- *Slide End* --
 
 -- *Slide* --

@@ -126,7 +126,7 @@ sed -n '1,2p; 5,6p' file or `sed -n -e '1,2p' -e '5,6p' file`
 Backreferences
 ==============
 
-Like the ampersand metacharacter, a backreference defines a region in a search and then allows that region to be backreferenced. 
+Like the ampersand metacharacter, a backreference defines a region in a search and then allows that region to be backreferenced. A statement with a backreference is actually beyond being a regular language.
 
 Regions are established by parentheses and then referenced by \1, \2 etc. For example;
 

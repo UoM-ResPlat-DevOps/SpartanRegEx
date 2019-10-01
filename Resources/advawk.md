@@ -35,6 +35,32 @@ Environment variables can be invoked with the ENVIRON array.
 `awk 'BEGIN { print ENVIRON["USER", "HOME"] }'`
 `awk 'BEGIN { print ENVIRON["HOME"] }'`
 
+Operators
+=========
+
+Arithmetic Operators
+--------------------
+
+Addition, Subtraction, Multiplication, Division, Modula, Pre- and Post- Incre(De
+cre)ment:
+`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx + realy) = ", (realx + realy) }'`
+`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx - realy) = ", (realx - realy) }'`
+`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx * realy) = ", (realx * realy) }'`
+`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx / realy) = ", (realx / realy) }'`
+`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx % realy) = ", (realx % realy) }'`
+`awk 'BEGIN { intx = 1; inty = --intx; printf "intx = %d, inty = %d\n", intx, inty }'`
+`awk 'BEGIN { intx = 1; inty = intx--; printf "intx = %d, inty = %d\n", intx, inty }'`
+`awk 'BEGIN { intx = 1; inty = ++intx; printf "intx = %d, inty = %d\n", intx, inty }'`
+
+Logical Operators
+-----------------
+
+Logical "and" is represented by `&&`.
+Logical "or" is represented by `||`
+Logical "not" is represented by `!`
+
+
+
 Arithmetic Functions
 ===================-
 
@@ -58,17 +84,6 @@ Print the sum of the fields (columns) of every line (row); NF is number of field
 
 The following are examples of the most arithmentic operators used by awk:
 
-Addition, Subtraction, Multiplication, Division, Modula, Pre- and Post- Incre(Decre)ment:
-`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx + realy) = ", (realx + realy) }'`
-`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx - realy) = ", (realx - realy) }'`
-`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx * realy) = ", (realx * realy) }'`
-`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx / realy) = ", (realx / realy) }'`
-`awk 'BEGIN { realx = 1.5; realy = 2.5; print "(realx % realy) = ", (realx % realy) }'`
-`awk 'BEGIN { intx = 1; inty = --intx; printf "intx = %d, inty = %d\n", intx, inty }'`
-`awk 'BEGIN { intx = 1; inty = intx--; printf "intx = %d, inty = %d\n", intx, inty }'`
-`awk 'BEGIN { intx = 1; inty = ++intx; printf "intx = %d, inty = %d\n", intx, inty }'`
-`awk 'BEGIN { intx = 1; inty = intx--; printf "intx = %d, inty = %d\n", intx, inty }'`
-
 Loops and Calculation
 =====================
 
@@ -77,7 +92,6 @@ Loops and Calculation
 awk '$7=="A" { ++count } END { print count }' simple1.txt
 awk '{sum+=$7} END {print sum}' simple2.txt
 awk '{ for(i=1; i<=NF;i++) j+=$i; print j; j=0 }' simple3.txt
-
 
 Conditional Statements
 ======================
