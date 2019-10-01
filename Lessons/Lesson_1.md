@@ -74,6 +74,7 @@ It is a perfect vehicle for hiding information.
 # Part 2: Warning! Limitations of Regular Expressions
 * A regular expression is limited by a finite number of internal states and termination states. A lot of code (e.g., html), scripts, or programming languages, that can nest arbitrarily deep, and the expression will need to have a means to recall the previous elements that it has opened (in html, for example). 
 * This said, arbitrary elements can be parsed with a regular expression. It requires several steps and will probably require some hand-editing. Works OK for small-scale changes! e.g., `http://levlafayette.com/node/128`
+* READ: `http://htmlparsing.com/regexes.html`
 * Consider using a language-approriate parser instead (e.g., HTML Tidy, lex/yacc/bison, ANTLR etc)
 -- *Slide End* --
 
