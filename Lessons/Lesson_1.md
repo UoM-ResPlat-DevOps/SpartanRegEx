@@ -32,6 +32,10 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
+<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/chomsky-hierarchy.png" /> 
+-- *Slide End* --
+
+-- *Slide* --
 # Part 1: Metacharacters
 * A major feature of RegEx is the use of *metacharacters*, which have a special meaning to the RegEx application over and above their literal meaning. Metacharacters must be escape with a backslash.
 * The entire suite of metacharacters that require an escape include: "(", "{" "}", ")", "^", "$", ".", "|", "?", "*", "+", "\".
@@ -142,6 +146,13 @@ It is a perfect vehicle for hiding information.
 # Part 4: RegEx in Other Languaes
 * Pascal
 * & more!
+-- *Slide End* --
+
+-- *Slide* --
+# References
+* XKCD cartoon from Randall Munroe, https://xkcd.com
+* Set reference of Chomsky grammer by J. Finkelstein on Wikipedia, CC BY-SA 3.0
+
 -- *Slide End* --
 
 
