@@ -8,7 +8,7 @@ Variables
 
 Variable assignment in awk is done with the -v option.
 
-`awk -v filename="test-high-gc-1.fasq" -v linecount="4000" 'BEGIN{print filename, linecount}'`
+`awk -v filename="test-high-gc-1.fastq" -v linecount="4000" 'BEGIN{print filename, linecount}'`
 
 The shell function `eval` can be used for output e.g.,
 
@@ -16,6 +16,9 @@ Integrating shell commands with awk for output.
 
 `eval $(echo 2 3 | awk '{ result=$1+$2; printf "result='\'%s\''\n", result }') 
 `echo "$result"`
+
+`eval $(wc -l ./test-high-gc-1.fastq | awk '{ linecount=$1; printf "linecount='\'%s\''\n", linecount }')
+`echo "$linecount"`
 
 Any global variables and their values being used by awk can be accessed by the --dump-variables command, with a default filename of awkvars.out.
 
@@ -60,7 +63,6 @@ Logical "or" is represented by `||`
 Logical "not" is represented by `!`
 
 
-
 Arithmetic Functions
 ===================-
 
@@ -99,6 +101,3 @@ Conditional Statements
 The awk language has a well-known control statement, if-then-else. If the condition is true, then-body is executed; otherwise, else-body is executed.
 
 awk -v oddball=7 'BEGIN { if (oddball % 2 == 0) print "oddball is even"; else  print "oddball is odd" }'
-
-
-

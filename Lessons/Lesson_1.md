@@ -105,9 +105,9 @@ It is a perfect vehicle for hiding information.
 
 -- *Slide* --
 # Part 3: Perl Regular Expressions 
-* Perl is largely derived from `sed`, `awk`, shell scripting, but also with programming functions. 
+* Perl is largely derived from `sed`, `awk`, but also with additional programming functions. 
 * Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
-* Examples in `/usr/local/common/perl.md`
+* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, and `metaperl.pl`
 -- *Slide End* --
 
 -- *Slide* --
@@ -116,14 +116,16 @@ It is a perfect vehicle for hiding information.
 
 -- *Slide* --
 # Part 3: Perl Compatible Regular Expressions
-* Perl Compatible Regular Expressions (PCRE) . Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. 
+* Perl Compatible Regular Expressions (PCRE). Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. 
 * Not the default in Perl! From Perl 5.10, PCRE is available as a replacement for Perl's default regular expression engine.
 * Functionality includes Just-in-time compiler support, flexible memory management, consistent escaping rules, extended character classes, minimal matching, unicode character support, etc.
-* Examples in `/usr/local/common/pcre.md`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 4: RegEx in Python
+* Python has a built-in package called re, which can be imported to perform regular expressions.
+
+* Examples in `/usr/local/common/RegEx/python.md`
 -- *Slide End* --
 
 -- *Slide* --
@@ -135,32 +137,14 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
-# Part 4: RegEx in Other Languaes
-* Ruby
-* Javascript
-* XML-Schema
-* SQL
--- *Slide End* --
-
--- *Slide* --
-# Part 4: RegEx in Other Languaes
-* Pascal
-* & more!
--- *Slide End* --
-
--- *Slide* --
 # References
 * XKCD cartoon from Randall Munroe, https://xkcd.com
 * Set reference of Chomsky grammer by J. Finkelstein on Wikipedia, CC BY-SA 3.0
-
+* Jeffrey E. F. Friedl, Mastering Regular Expressions (third edition), O'Reilly, 2006 FP 1997
+ 
 -- *Slide End* --
 
 
 -- *Slide* --
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />
 -- *Slide End* --
-
-
-
-
-
