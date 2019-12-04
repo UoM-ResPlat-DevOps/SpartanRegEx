@@ -2,7 +2,6 @@
 # Goals for today
 Part 1: Basic RegEx: grep, sed, awk
 Part 2: Advanced RegEx: scripting and awk programs
-Part 2: Extending and Scripting Regular Expressions
 Part 3: Programming RegEx with perl
 Part 4: RegEx in Other Languages
 -- *Slide End* --
@@ -124,12 +123,14 @@ It is a perfect vehicle for hiding information.
 -- *Slide* --
 # Part 4: RegEx in Python
 * Python has a built-in package called re, which can be imported to perform regular expressions.
-
+* The re package has a typical range of metacharacters, a number of special sequences, special issues with backslashes, and a range of regular expression methods.
 * Examples in `/usr/local/common/RegEx/python.md`
 -- *Slide End* --
 
 -- *Slide* --
 # Part 4: RegEx in Java
+* Java uses the java.util.regex package for regular expressions and has a similar syntax to what is used in Perl. 
+* Examples in `/usr/local/common/RegEx/java.md`
 -- *Slide End* --
 
 -- *Slide* --
@@ -141,9 +142,7 @@ It is a perfect vehicle for hiding information.
 * XKCD cartoon from Randall Munroe, https://xkcd.com
 * Set reference of Chomsky grammer by J. Finkelstein on Wikipedia, CC BY-SA 3.0
 * Jeffrey E. F. Friedl, Mastering Regular Expressions (third edition), O'Reilly, 2006 FP 1997
- 
 -- *Slide End* --
-
 
 -- *Slide* --
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />

@@ -61,7 +61,7 @@ sed 's/ELM/LUV/gw selection.txt' gattaca.txt
 Quoting
 =======
 
-Generally strong quotes are recommended for regular expressions. However, sed often wants to use weak quotes to include (for example) variable substitution.
+Generally strong quotes are recommended for regular expressions. However, sed often wants to use weak quotes to include (for example) variable substitution. 
 
 Consider for example, a job run which searches for a hypothetical element and comes with the result of Unbihexium. This is the equivalent of:
 
@@ -71,6 +71,12 @@ Consider for example, a job run which searches for a hypothetical element and co
 A file where the search term UnknownElement exists could be replaced with Unbihexium with:
 
 `sed "s/UnknownElement/$UnknownElement/g" filename`
+
+Another issue is conducting substitutions with single quotes in the stream, in which case double-quotes are an appropriate tool.
+
+sed "s/ones/one's/" <<< 'ones thing'
+
+Another method is to replace each embedded single quote with the sequence: '\'', i.e., quote backslash quote quote, which closes the string, appends an escaped single quote and reopens the string. 
 
 The sed metacharacter, `&` can be used as variable for the selection term. For example, a list of telephone numbers could have the first two digits selected and then surrounded by parantheses for readability.
 
