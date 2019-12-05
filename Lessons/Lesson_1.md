@@ -128,13 +128,17 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
+# Part 4: RegEx in PHP
+* PHP has two types of regular expressions; POSIX-extended, and Perl-compatible. The Perl-compatible regexes must be enclosed in delimiters, but are more powerful. 
+* Both have 
+* Examples in `/usr/local/common/RegEx/php.md`
+-- *Slide End* --
+
+
+-- *Slide* --
 # Part 4: RegEx in Java
 * Java uses the java.util.regex package for regular expressions and has a similar syntax to what is used in Perl. 
 * Examples in `/usr/local/common/RegEx/java.md`
--- *Slide End* --
-
--- *Slide* --
-# Part 4: RegEx in PHP
 -- *Slide End* --
 
 -- *Slide* --
