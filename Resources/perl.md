@@ -1,4 +1,5 @@
-# Basics of Perl
+Basics of Perl
+==============
 
 Simple variables always begin with a dollar sign, and can hold a number or text.
 
@@ -6,9 +7,8 @@ Comments begin with # and continue for the rest of the line.
 
 Variables can appear within a double-quoted string.
 
-Perl has loops, conditionals etc.
-
-# Perl special characters
+Perl special characters
+========================
 
 \t	tab character
 \n 	newline character
@@ -21,7 +21,8 @@ Perl has loops, conditionals etc.
 \D	anything not \d , i.e., ! [ˆ0-9]
 
 
-# Perl Metacharacters
+Perl Metacharacters
+===================
 
 In Perl regular expressions, the following are metacharacters:
 
@@ -42,6 +43,7 @@ In Perl regular expressions, the following are metacharacters:
 | [^..]		| Matches characters not in the brackets				|
 | |		| Matches either, an "or" statement					|
 | \b		| Matches a word boundary						|
+| \B		| Matches where \b{} doesn't match					|
 | \w		| Matches alphanumeric and underscore					|
 | \W		| Matches non-alphanumeric						|
 | \s		| Matches whitespace							|
@@ -50,10 +52,21 @@ In Perl regular expressions, the following are metacharacters:
 | ^		| Matches beginning of a line or string					|
 | $		| Matches end of a line or string					|
 
-See metaperl.pl
+See perl -w metaperl.pl
 
+Word Boundaries
+===============
 
-# Perl Matching RegEx
+The metacharacter \b is like an anchor, matching a zero-length boundary before the first character in a word, after the last character in a ord, or between two characters where one character is word and the other is not.
+
+When seeking to match whole words, one should use \bword\b ; an old method was /(^|\W)word(\W|$)/), which is equivalent.
+
+The position of the \b can alter the search term.
+
+See perl -w radio.pl
+
+Perl Matching RegEx
+===================
 
 A variable, for example '$searchterm' is linked, '=~', to a pattern match, for example 'm/^[0-9]+$/'.
 
@@ -65,7 +78,8 @@ The non-capturing parentheses "(?: )" will group without capturing. For example 
 
 Review the code tempconv.pl for an example of the above.
 
-# Repetition
+Repetition
+==========
 
 Any expression (a single character, a marked sub-expression, or a character class) can be repeated with the *, +, ?, and {} operators.
  
@@ -85,7 +99,8 @@ Expressions can also be repeated:
 
 Don't use 'a(*)'!
 
-# Perl Substitution RegEx
+Perl Substitution RegEx
+=======================
 
 A variable, for example '$searchterm' is linked,  '=~', to a substitution value, for example 's/regex/replacement/'.
 
@@ -97,7 +112,8 @@ Perl has the capability to "lookaround" for patterns in a regex and insert repla
 
 Consider also the population of Australia, 25323300 (2016) estimate. If one wanted to present this as comma-separated in groups of three (25,323,300)the following could be used: '$pop =~ s/(?<=\d)(?=(\d\d\d)+(?!\d))/,/g;'
 
-# Lookahead and lookbehind summary table:
+Lookahead and lookbehind summary table
+======================================
 
 | Type			| Regex		| Success conditions			|
 |-----------------------|---------------|---------------------------------------|
@@ -105,5 +121,3 @@ Consider also the population of Australia, 25323300 (2016) estimate. If one want
 | Negative Behind	| (?<!..)	| if regex does not match to the left	|
 | Postivfe Ahead	| (?=..)	| if regex matches to the right		|
 | Negative Ahead	| (?!..)	| if regex does not match to the right	|
-
-

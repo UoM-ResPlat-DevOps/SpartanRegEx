@@ -3,7 +3,7 @@
 Part 1: Basic RegEx: grep, sed, awk
 Part 2: Advanced RegEx: scripting and awk programs
 Part 3: Programming RegEx with perl
-Part 4: RegEx in Other Languages
+Part 4: Some RegEx in PHP, Python, and Java
 -- *Slide End* --
 
 -- *Slide* --
@@ -121,19 +121,19 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
+# Part 4: RegEx in PHP
+* PHP has two types of regular expressions; POSIX-extended, and Perl-compatible. The Perl-compatible regexes must be enclosed in delimiters, but are more powerful.
+* There is also a number of string functions which can mimic basic sed functions.
+* POSIX-extended have been deprecated from PHP5.3+ and removed from 7.0+
+* Examples in `/usr/local/common/RegEx/php.md`, `posix.php`, and `pcre.php`.
+-- *Slide End* --
+
+-- *Slide* --
 # Part 4: RegEx in Python
 * Python has a built-in package called re, which can be imported to perform regular expressions.
 * The re package has a typical range of metacharacters, a number of special sequences, special issues with backslashes, and a range of regular expression methods.
 * Examples in `/usr/local/common/RegEx/python.md`
 -- *Slide End* --
-
--- *Slide* --
-# Part 4: RegEx in PHP
-* PHP has two types of regular expressions; POSIX-extended, and Perl-compatible. The Perl-compatible regexes must be enclosed in delimiters, but are more powerful. 
-* Both have 
-* Examples in `/usr/local/common/RegEx/php.md`
--- *Slide End* --
-
 
 -- *Slide* --
 # Part 4: RegEx in Java
