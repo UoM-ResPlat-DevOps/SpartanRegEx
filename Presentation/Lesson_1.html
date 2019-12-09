@@ -44,9 +44,8 @@
 # Goals for today
 Part 1: Basic RegEx: grep, sed, awk
 Part 2: Advanced RegEx: scripting and awk programs
-Part 2: Extending and Scripting Regular Expressions
 Part 3: Programming RegEx with perl
-Part 4: RegEx in Other Languages
+Part 4: Some RegEx in PHP, Python, and Java
 </script></section>
 <section data-markdown><script type="text/template">
 # Slide Respository
@@ -134,7 +133,7 @@ It is a perfect vehicle for hiding information.
 # Part 3: Perl Regular Expressions 
 * Perl is largely derived from `sed`, `awk`, but also with additional programming functions. 
 * Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
-* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, and `metaperl.pl`
+* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, `metaperl.pl`, `radio.pl`
 </script></section>
 <section data-markdown><script type="text/template">
 <img src="https://imgs.xkcd.com/comics/regular_expressions.png" />
@@ -146,23 +145,31 @@ It is a perfect vehicle for hiding information.
 * Functionality includes Just-in-time compiler support, flexible memory management, consistent escaping rules, extended character classes, minimal matching, unicode character support, etc.
 </script></section>
 <section data-markdown><script type="text/template">
+<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/phpbadparts.jpg" />
+</script></section>
+<section data-markdown><script type="text/template">
+# Part 4: RegEx in PHP
+* PHP has two types of regular expressions; POSIX-extended, and Perl-compatible. The Perl-compatible regexes must be enclosed in delimiters, but are more powerful.
+* There is also a number of string functions which can mimic basic sed functions.
+* POSIX-extended have been deprecated from PHP5.3+ and removed from 7.0+
+* Examples in `/usr/local/common/RegEx/php.md`, `posix.php`, and `pcre.php`.
+</script></section>
+<section data-markdown><script type="text/template">
 # Part 4: RegEx in Python
 * Python has a built-in package called re, which can be imported to perform regular expressions.
-
+* The re package has a typical range of metacharacters, a number of special sequences, special issues with backslashes, and a range of regular expression methods.
 * Examples in `/usr/local/common/RegEx/python.md`
 </script></section>
 <section data-markdown><script type="text/template">
 # Part 4: RegEx in Java
-</script></section>
-<section data-markdown><script type="text/template">
-# Part 4: RegEx in PHP
+* Java uses the java.util.regex package for regular expressions and has a similar syntax to what is used in Perl. 
+* Examples in `/usr/local/common/RegEx/java.md`
 </script></section>
 <section data-markdown><script type="text/template">
 # References
 * XKCD cartoon from Randall Munroe, https://xkcd.com
 * Set reference of Chomsky grammer by J. Finkelstein on Wikipedia, CC BY-SA 3.0
 * Jeffrey E. F. Friedl, Mastering Regular Expressions (third edition), O'Reilly, 2006 FP 1997
- 
 </script></section>
 <section data-markdown><script type="text/template">
 <img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanIntro/master/Images/hypnotoad.png" width="150%" height="150%" />
