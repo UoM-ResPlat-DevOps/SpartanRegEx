@@ -119,5 +119,5 @@ Lookahead and lookbehind summary table
 |-----------------------|---------------|---------------------------------------|
 | Positive Behind	| (?<=..)	| if regex matches to the left		|
 | Negative Behind	| (?<!..)	| if regex does not match to the left	|
-| Postivfe Ahead	| (?=..)	| if regex matches to the right		|
+| Postive Ahead		| (?=..)	| if regex matches to the right		|
 | Negative Ahead	| (?!..)	| if regex does not match to the right	|

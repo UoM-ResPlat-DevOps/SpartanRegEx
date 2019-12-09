@@ -106,7 +106,7 @@ It is a perfect vehicle for hiding information.
 # Part 3: Perl Regular Expressions 
 * Perl is largely derived from `sed`, `awk`, but also with additional programming functions. 
 * Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
-* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, and `metaperl.pl`
+* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, `metaperl.pl`, `radio.pl`
 -- *Slide End* --
 
 -- *Slide* --
@@ -118,6 +118,10 @@ It is a perfect vehicle for hiding information.
 * Perl Compatible Regular Expressions (PCRE). Library written in C (1997), considered more powerful and flexible than POSIX. Incorporated into scripting languages like R and PHP. 
 * Not the default in Perl! From Perl 5.10, PCRE is available as a replacement for Perl's default regular expression engine.
 * Functionality includes Just-in-time compiler support, flexible memory management, consistent escaping rules, extended character classes, minimal matching, unicode character support, etc.
+-- *Slide End* --
+
+-- *Slide* --
+<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/phpbadparts.jpg" />
 -- *Slide End* --
 
 -- *Slide* --
