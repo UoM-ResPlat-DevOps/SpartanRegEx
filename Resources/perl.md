@@ -13,11 +13,11 @@ Perl special characters
 \t	tab character
 \n 	newline character
 \r	carriage return character
-\s 	matches any “whitespace” character (space, tab, newline, etc)
-\S	anything not \s
-\w	[a-zA-Z0-9R] Useful as in \w+ to match a word.
+\s 	matches any one whitespace character (space, tab, newline, etc)
+\S	matches any one not \s
+\w	matches any one word; [a-zA-Z0-9R] Useful as in \w+ to match a word.
 \W	anything not \w , i.e., [ˆa-zA-Z0-9R]
-\d	[0-9] , a digit
+\d	[0-9] , any one digit
 \D	anything not \d , i.e., ! [ˆ0-9]
 
 
@@ -72,11 +72,11 @@ A variable, for example '$searchterm' is linked, '=~', to a pattern match, for e
 
 The "/i"  modifier makes the test case-insensitive appended after closing a match operator.
 
-After a successful match, Perl provides the variables $1 , $2 , $3 , etc., which hold the text matched by their respective ( ) parenthesized subexpr essions in the regex. Sub-expressions can be nested.
+After a successful match, Perl provides the variables $1 , $2 , $3 , etc., which hold the text matched by their respective ( ) parenthesized subexpressions in the regex. Sub-expressions can be nested.
 
 The non-capturing parentheses "(?: )" will group without capturing. For example '(?:ab)+' will repeat the match "ab" without creating any separate sub-expressions.
 
-Review the code tempconv.pl for an example of the above.
+Review the code in names.pl and tempconv.pl for an example of the above.
 
 Repetition
 ==========

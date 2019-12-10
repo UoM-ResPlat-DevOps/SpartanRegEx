@@ -1,8 +1,8 @@
-#!/bin/perl
-use warnings;
 # Modified from Friedl's "Mastering Regular Expressions"
 # Inclusion of perl path, kelvin values, initialised values, use warnings
 # by Lev Lafayette. 2019
+
+use warnings;
 
 my ($celsius, $fahrenheit, $kelvin) = 0;
 
@@ -15,8 +15,9 @@ if ($input =~ m/^([-+]?[0-9]+(?:\.[0-9]*)?)\s*([CFK])$/i) {
 # $1 is the first number with the whitespace class (s)
 # $2 is "C" or "F" or "K", case insensitive.
 # The notation (?:..) will group, but not capture.
-	$InputNum = $1; # Save to named variables to make the ...
-	$type = $2;     # ... rest of the program easier to read.
+
+$InputNum = $1; # Save to named variables to make the ...
+$type = $2;     # ... rest of the program easier to read.
 
 if ($type =~ m/c/i) {
 # Match c, case insensitive

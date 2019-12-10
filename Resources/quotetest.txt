@@ -1,0 +1,15 @@
+# From: https://stackoverflow.com/questions/12680767/perl-regular-expression-matching-on-large-unicode-code-points
+# Replace all with double quotes
+＂ fullwidth
+“ left
+” right
+„ low
+" normal
+
+# Replace all with single quotes
+' normal
+‘ left
+’ right
+‚ low
+‛ reverse
+` backtick

@@ -6,9 +6,12 @@ It is good practise to enclose the regular expression in single quotes, to preve
 e.g., `grep 'ATEK' gattaca.txt` rather than `grep ATEK gattaca.txt`
 
 Grep with Metacharacters
-------------------------
+========================
 
 Some examples of grep options with metacharacters.
+
+* Print only the matched parts of a matching line with separate outline lines.
+grep -o '"[^"]\+"' filename
 
 * Count the number of empty lines in a file, '-c' is count.
 grep -c '^$' filename
@@ -20,7 +23,7 @@ grep -v '[aeiou]' /usr/share/dict/words
 grep -iwn '^QANTAS' /usr/share/dict/*
 
 Faster Grep
------------
+===========
 
 * Localisation settings might slow down your grep search. Prefixing the search with LC_ALL forces applications to use the same language (US English). This speeds up grep in many cases because it is a singl-ebyte comparison rather than multi-byte (as is the case with UTF8).  It is not appropriate if you are searching file with non-ASCII standard characters!
 

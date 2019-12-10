@@ -3,7 +3,7 @@
 Part 1: Basic RegEx: grep, sed, awk
 Part 2: Advanced RegEx: scripting and awk programs
 Part 3: Programming RegEx with perl
-Part 4: Some RegEx in PHP, Python, and Java
+Part 4: Some RegEx in PHP, Python, Java, and SimpleRegEx
 -- *Slide End* --
 
 -- *Slide* --
@@ -15,7 +15,7 @@ Part 4: Some RegEx in PHP, Python, and Java
 -- *Slide End* --
 
 -- *Slide* --
-# Part 1: UNIX loves Text
+# Part 0: UNIX loves Text
 The string is a stark data structure and 
 everywhere it is passed there is much duplication of process. 
 It is a perfect vehicle for hiding information. 
@@ -27,7 +27,7 @@ It is a perfect vehicle for hiding information.
 * Regular Expressions ("RegEx") are a general pattern notations that provides the means for efficient and effective text processing. 
 * Major initial formal development by Stephen Cole Kleene as a mathematical "Regular Language" in 1951, located as a Type-3 grammar in Chomsky's 1956 hierarchy. RegExes are "not quite" the same as "RegLang", but are related.
 * First major computational use was in 1968 with pattern matching in the QED text editor and, independently in the same year, in compiler design. The regular expression system in QED was ported to `ed` in 1969.
-* Main tools for regular expressions are `grep` (1974), `sed` (1974), `awk` (1977), and `perl` (1987).
+* Main tools for regular expressions are `grep` (1974), `sed` (1974), `awk` (1977), `perl` (1987) and `pcre` (1997).
 -- *Slide End* --
 
 -- *Slide* --
@@ -46,7 +46,7 @@ It is a perfect vehicle for hiding information.
 # Part 1: Searching with `grep`
 * Most basic use is searching text. Typical formal structure is a search for a pattern with Boolean logic, grouping, quantification (e.g., number of instances), and wildcards, followed by an optional operation (arithemetic count, replacement etc) on the pattern. e.g., `grep -i ATEK gattaca.txt`. 
 * Common options used with basic `grep` include -i (ignore case), -w (whole words), -v (inverted match), -c (count), -L and -l (print filenames), -n (line number), -r and -R (recursive).
-* Examples of `grep` with these characters are available in `/usr/local/common/RegEx/basicgrep.md`
+* Elaboration and examples in `/usr/local/common/RegEx/basicgrep.md`
 -- *Slide End* --
 
 -- *Slide* --
@@ -54,7 +54,7 @@ It is a perfect vehicle for hiding information.
 * As the name implies `sed` is a *stream editor*. It takes a data stream, conducts a regular expression, and sends it to standard output. 
 * The general form is `sed [OPTION] [SCRIPT] [INPUT]`. Common options are `e` (multiple scripts per command), `-f` (add script file) and `-i` (in-place editing).
 * The general form of a script is `Command/RegExp/Replacement/Flags`. A common command is `s` for `substitute`, common flags are `g` for global replacement thoughout each line and `I` to ignore case. 
-* Examples of `sed` are available at `/usr/local/common/RegEx/basicsed.md`
+* Elaboration and examples in `/usr/local/common/RegEx/basicsed.md`
 * A collection of `sed` one-liners are at: `http://sed.sourceforge.net/sed1line.txt`
 -- *Slide End* --
 
@@ -89,12 +89,7 @@ It is a perfect vehicle for hiding information.
 # Part 2: Shells and Shell Scripting
 * Variety of shells; sh, bash, csh, tcsh, ksh, zsh, fish, nadvsh. Environment modification. 
 * Shell scripting allows for automation; variables, loops, conditionals, functions.
-* Examples in `/usr/common/common/RegEx/scripting.md`
--- *Slide End* --
-
--- *Slide* --
-# Part 2: Shell Scripting with RegEx
-* Incorporating `grep`, `sed` and `awk` into shell scripts.
+* Elaboration and examples in `/usr/common/common/RegEx/scripting.md`
 * Remember `awk` is a fully-fledged programming language. See `/usr/local/common/RedEx/advawk.md`
 -- *Slide End* --
 
@@ -106,7 +101,14 @@ It is a perfect vehicle for hiding information.
 # Part 3: Perl Regular Expressions 
 * Perl is largely derived from `sed`, `awk`, but also with additional programming functions. 
 * Perl RegEx has additional functionality includes lazy matching, backtracking, named capture groups, and recursive patterns. Similar syntax used in Javascript, Python, Ruby, XML Schema.
-* Examples in `/usr/local/common/RegEx/perl.md`, `tempconv.pl`, `metaperl.pl`, `radio.pl`
+* Elaboration and examples in `/usr/local/common/RegEx/perl.md`, `metaperl.pl`, `radio.pl`
+-- *Slide End* --
+
+-- *Slide* --
+# Part 3: Capture Groups, Lookarounds
+* When there is a successful match, Perl provides the variables $1, $2, etc to hold the text matched by their their parenthesis subexpressions. See input variables in `names.pl` and `tempconv.pl`
+* Note that the variables are not assigned if they do not match, and they do not clear!
+* 
 -- *Slide End* --
 
 -- *Slide* --
@@ -146,10 +148,26 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
+# Part 4: Simple RegEx
+* RegEx in all languages tends to be terse and hard to read. The Simple Regex Language (SRL) replaces the complex metacharacters with high-level language constructs.
+* Simple RegEx will help you understand complex regular expressions!
+* See `simpleregex.md`
+-- *Slide End* --
+
+-- *Slide* --
+# A Final Remark
+Some people, when confronted with a problem, think "I know, I'll use regular expressions." Now they have two problems.
+-- Jamie Zawinski
+* Keep your regexes simple, unless you *really* need something complex. Three readable and simple steps are better than one obsfucated and complex step.
+-- *Slide End* --
+
+-- *Slide* --
 # References
 * XKCD cartoon from Randall Munroe, https://xkcd.com
 * Set reference of Chomsky grammer by J. Finkelstein on Wikipedia, CC BY-SA 3.0
+* Dale Dougherty, Arnold Robbins, sed & awk (second edition), O'Reilly, 2000 FP 1997
 * Jeffrey E. F. Friedl, Mastering Regular Expressions (third edition), O'Reilly, 2006 FP 1997
+* Jan Goyvaerts, Regular Expression: The Complete Tutorial, 2007, FP 2006
 -- *Slide End* --
 
 -- *Slide* --

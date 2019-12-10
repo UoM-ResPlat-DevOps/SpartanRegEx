@@ -17,7 +17,57 @@ Some Features
 
 4. 
 
+Special Characters
+==================
 
+Character	Meaning
+\n		newline
+\r		carriage return
+\t		tab
+\0		null character
+\YYY		octal character YYY
+\xY		hexadecimal character YY
+\cY		control character Y (e.g., \cC)
+
+
+Assertions
+==========
+
+Character	Meaning
+^		Start of a string
+$		End of a string
+\b		Word boundary
+\B		Non-word boundary
+(?=..)		Positive lookahead
+(?!..)		Negative lookahead
+(?<=..)		Positive lookbehind
+(?<!..)		Negative lookbehind
+\Q..\E		Remove metacharacter meaning
+
+Quantifiers
+===========
+
+Character	Meaning
+*		O or more
++		1 or more
+?		0 or 1
+{2}		exactly 2
+{2,5}		between 2 and 5
+{2,}		2 or more
+
+
+Classes
+=======
+
+PCRE uses character classes and POSIX classes e.g.,
+
+Character	Meaning
+[ab-d]		One character of a,b,c,d
+[^ab-d]		One character that is not a,b,c,d
+\d		One digit
+\D		One non-digit
+\s		One whitespace
+\S		One non-whitespace
 
 Differences from Perl
 =====================
@@ -45,3 +95,10 @@ Pattern            PCRE2 matches     Perl matches
 
 Taken and derived from: pcre2compat man page by Philip Hazel
 https://www.pcre.org/current/doc/html/pcre2compat.html
+
+PCRE Tester
+===========
+
+Test your code! 
+`https://regex101.com/`
+

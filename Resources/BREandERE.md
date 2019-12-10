@@ -67,15 +67,19 @@ and compare to
 sed -E 's/QQLQ?//' gattaca.txt
 
 Backreferences
-=============
+==============
 
-Regular expressions can also backreference (which is technically beyond being a regular language), that is match a previous sub-expression with the values \1, \2, etc. The following is a useful example where one can search for any word (case-insensitive, line-numbered) and see if that word is repeated, catching common typing errors such as 'The the'. 
+Regular expressions can also backreference (which is technically beyond being a regular language), that is match a previous sub-expression with the values \1, \2, etc. The following is a useful example where one can search for any word (case-insensitive, line-numbered) and see if that word is repeated, catching common typing errors such as 'The the'. Note the multiple ways of doing this.
 
-grep -inw '\([a-z]\+\) \+\1' files
+grep -inw '\([a-z]\+\) \+\1' file
 
-grep -Einw '([a-z]+) +\1' files
+grep -Einw '([a-z]+) +\1' file
 
-grep -Ein '\<([a-z]+) +\1\>' files
+grep -Ein '\<([a-z]+) +\1\>' file
+
+Another similar example, matching repeat characters rather than words (hencem no -w).
+
+grep '\([A-Z]\)\1' gattaca.txt
 
 An example to append the string "EXTRA TEXT" to each line.
 
@@ -93,4 +97,3 @@ For example, if an escape character precedes a character that is not a regular e
 For example:
 
 `awk '/QL\QA$/' gattaca.txt` will be treated like `awk '/QLQA$/' gattaca.txt` in most contemporary versions of awk. Some however will treat `awk '/QL\QA$/' gattaca.txt` and `awk '/QL\\QA$/' gattaca.txt` as equivalent.
-

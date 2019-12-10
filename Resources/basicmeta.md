@@ -1,5 +1,9 @@
+==============
+Metacharacters
+==============
+
 Introduction
-------------
+============
 
 Metacharacters are heavily used in regular expressions.
 
@@ -10,7 +14,7 @@ Note that metacharacters will *vary* according to the context they are used. The
 Like other *nix-like system this environment is case-sensitive. Metacharacters that are used outside of their context, even within a regular expression, will be treated as literal character.
 
 Basic Examples
---------------
+=============
 
 Note that the examples use strong quotes for search term to prevent the possibility of inadvertant shell expansion. If shell expansion, variable substitution etc is desired then use weak quotes.
 
@@ -29,8 +33,17 @@ Note that the examples use strong quotes for search term to prevent the possibil
 | \<  \>	| Beginning and end word boundaries	| `grep '\<cat\>' /usr/share/dict/words`	| 
 
 
+Remember that the `.` is _lazy_ (it matches _any_ character, including those you might not want or need) and the `*` is _greedy_ (it matches 0 or more preeceding characters).
+
+Try the following:
+grep '".*"' problem.txt
+grep -o '"[^"]\+"' problem.txt
+
+The second example (grep, matching only, negate set of any characters except quote, add match at least once) is much more complex, but gives the right answer.
+
+
 Range Statements
-----------------
+================
 
 A range statement. e.g., [[:alpha:]] is the equivalent of the range [A-Za-z], or [:punct:] is equivalent of '][!"#$%&'()*+,./:;<=>?@\^_`{|}~-].
 
