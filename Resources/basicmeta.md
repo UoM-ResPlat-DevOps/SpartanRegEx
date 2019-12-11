@@ -20,8 +20,8 @@ Note that the examples use strong quotes for search term to prevent the possibil
 
 | Metacharacter | Explanation         			| Example                                       |
 |:--------------|:--------------------------------------|-----------------------------------------------|
-| ^             | Beginning of line anchor   		| `grep '^row' /usr/share/dict/words`       	|
-| $             | End of line anchor         		| `grep 'row$' /usr/share/dict/words`       	|
+| ^             | Beginning of string anchor   		| `grep '^row' /usr/share/dict/words`       	|
+| $             | End of string anchor         		| `grep 'row$' /usr/share/dict/words`       	|
 | .             | Any single character       		| `grep '^...row...$' /usr/share/dict/words`	|
 | *             | Match zero plus preceding characters 	| `grep '^...row.*' /usr/share/dict/words`  	|
 | [ ]           | Matches one in the set                | `grep '^[Pp].row..$' /usr/share/dict/words`  	|
