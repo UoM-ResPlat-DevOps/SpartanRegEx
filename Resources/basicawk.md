@@ -38,7 +38,6 @@ Other shell commands can be piped through awk
 
 awk: `awk -F"," '{print $1 " : " $3 | "sort"}' quakes.csv | less`
 
-
 Selecting Content
 =================
 
@@ -63,6 +62,15 @@ Whereas row numbers are specified by $num, 'NR' specifies the row number. More e
 `awk -F"," 'END {print NR}' quakes.csv`    
 `awk -F"," 'NR>1{print $3 "," $2 "," $1}' quakes.csv`   
 `awk -F"," '(NR <2) || (NR!=6) && (NR<9)' quakes.csv > selection.txt`   
+
+Print and Printf
+================
+
+The print function will produce output in a simple format with the stings or numbers in a list, separated by commas. The output is in single spaces followed by a newline
+
+The printf function allows control over the format, such as precision in numbers etc.
+
+awk -F"," '{ if (FNR>1)  printf "%s,%s,%s,%2.15f,%s\n", $1, $2, $3, $4*1.1, $5; else printf "%s, %s, %s, %s, %s\n", $1, $2, $3, $4, $5}' climate_20048335.csv > climate_20048335_new.csv
 
 Inserting Text
 ==============

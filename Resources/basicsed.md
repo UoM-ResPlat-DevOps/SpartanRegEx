@@ -110,6 +110,9 @@ Or for specific lines.
 `sed '1,2d' gattaca.txt`
 `sed -n '1,2p' gattaca.txt`
 
+sed -i '1s/"//g' climate_20048335.csv (Remove quotes from line one only)
+sed -i '19,33s/foo/bar/g' filename (Replace foo with bar on lines 19 to 33 in $filename)
+
 `sed -n '1,3p' gattaca.txt` or `sed -n 1,+2p gattaca.txt`
 
 `sed -n '1,3!p' gattaca.txt` 
