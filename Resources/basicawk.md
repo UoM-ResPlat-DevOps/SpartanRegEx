@@ -15,21 +15,29 @@ There are many variants of awk, but the most common is GNU awk (often called 'ga
 
 `awk --version`
 
-Internal Field Separator
-========================
+Field Separators
+================
 
 The easiest and certainly one of the most common uses of awk is create reports from structured data; columns and rows are referenced by number and by default the space acts as the separator.
 
-By default awk uses a space as the internal field separator. To use a comma invoke with `-F` e.g. `awk -F"," '{print $3}' quakes.csv`
+By default awk uses a space as the internal field separator. The specific field seperator is specificed with the -F option, using strong or weakquotes as desired, i.e., awk -F'FS', 'commands' filename, or  awk 'BEGIN{FS="FS";}'.
+
+To use a comma invoke with `-F` e.g. `awk -F"," '{print $3}' quakes.csv`
 
 Adding new separators to the standard output print of multiple fields is recommended - otherwise AWK will print without any separators. For example; 
 
 `awk -F"," '{print $1 " : " $3}' quakes.csv`
 `awk -F"," '{print $1 "\t" $3}' quakes.csv`
 
+By default multiple fields are selected with a comma and the output is space delimited. The Output Field Separator can modify this.
+
+`awk -F"," '{print $1,$3}' quakes.csv`
+`awk -F"," 'BEGIN{OFS=",";} {print $1,$3}' quakes.csv`
+
 Other shell commands can be piped through awk
 
 awk: `awk -F"," '{print $1 " : " $3 | "sort"}' quakes.csv | less`
+
 
 Selecting Content
 =================
