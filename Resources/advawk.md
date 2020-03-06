@@ -55,6 +55,17 @@ cre)ment:
 `awk 'BEGIN { intx = 1; inty = intx--; printf "intx = %d, inty = %d\n", intx, inty }'`
 `awk 'BEGIN { intx = 1; inty = ++intx; printf "intx = %d, inty = %d\n", intx, inty }'`
 
+
+High Precision
+--------------
+
+Precision can be varied using the CONVFMT conversion from string to floats.
+
+`a='0.4970436865354813'`
+`echo "$a" | awk '{printf("%.16f\n", $1*1.1)}'`
+
+Read more: https://unix.stackexchange.com/questions/57006/awk-high-precision-arithmetic
+
 Logical Operators
 -----------------
 
@@ -84,7 +95,6 @@ Print the total number of fields in $file.
 Print the sum of the fields (columns) of every line (row); NF is number of field.    
 `awk '{sum=0; for (i=1; i<=NF; i++) sum=sum+$i; print sum}' $file`	
 
-The following are examples of the most arithmentic operators used by awk:
 
 Loops and Calculation
 =====================

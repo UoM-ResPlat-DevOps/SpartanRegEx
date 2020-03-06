@@ -63,6 +63,8 @@ Whereas row numbers are specified by $num, 'NR' specifies the row number. More e
 `awk -F"," 'NR>1{print $3 "," $2 "," $1}' quakes.csv`   
 `awk -F"," '(NR <2) || (NR!=6) && (NR<9)' quakes.csv > selection.txt`   
 
+One can produce a script such as awkselect.awk, which can be invoked with `awk -f awkselect.awk quakes.csv > select.txt`
+
 Print and Printf
 ================
 
