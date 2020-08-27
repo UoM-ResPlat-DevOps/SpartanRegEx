@@ -15,17 +15,24 @@ There are many variants of awk, but the most common is GNU awk (often called 'ga
 
 `awk --version`
 
-Internal Field Separator
-========================
+Field Separators
+================
 
 The easiest and certainly one of the most common uses of awk is create reports from structured data; columns and rows are referenced by number and by default the space acts as the separator.
 
-By default awk uses a space as the internal field separator. To use a comma invoke with `-F` e.g. `awk -F"," '{print $3}' quakes.csv`
+By default awk uses a space as the internal field separator. The specific field seperator is specificed with the -F option, using strong or weakquotes as desired, i.e., awk -F'FS', 'commands' filename, or  awk 'BEGIN{FS="FS";}'.
+
+To use a comma invoke with `-F` e.g. `awk -F"," '{print $3}' quakes.csv`
 
 Adding new separators to the standard output print of multiple fields is recommended - otherwise AWK will print without any separators. For example; 
 
 `awk -F"," '{print $1 " : " $3}' quakes.csv`
 `awk -F"," '{print $1 "\t" $3}' quakes.csv`
+
+By default multiple fields are selected with a comma and the output is space delimited. The Output Field Separator can modify this.
+
+`awk -F"," '{print $1,$3}' quakes.csv`
+`awk -F"," 'BEGIN{OFS=",";} {print $1,$3}' quakes.csv`
 
 Other shell commands can be piped through awk
 
@@ -55,6 +62,17 @@ Whereas row numbers are specified by $num, 'NR' specifies the row number. More e
 `awk -F"," 'END {print NR}' quakes.csv`    
 `awk -F"," 'NR>1{print $3 "," $2 "," $1}' quakes.csv`   
 `awk -F"," '(NR <2) || (NR!=6) && (NR<9)' quakes.csv > selection.txt`   
+
+One can produce a script such as awkselect.awk, which can be invoked with `awk -f awkselect.awk quakes.csv > select.txt`
+
+Print and Printf
+================
+
+The print function will produce output in a simple format with the stings or numbers in a list, separated by commas. The output is in single spaces followed by a newline
+
+The printf function allows control over the format, such as precision in numbers etc.
+
+awk -F"," '{ if (FNR>1)  printf "%s,%s,%s,%2.15f,%s\n", $1, $2, $3, $4*1.1, $5; else printf "%s, %s, %s, %s, %s\n", $1, $2, $3, $4, $5}' climate_20048335.csv > climate_20048335_new.csv
 
 Inserting Text
 ==============
