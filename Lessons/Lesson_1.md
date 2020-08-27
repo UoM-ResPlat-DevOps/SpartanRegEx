@@ -8,7 +8,7 @@
 
 -- *Slide* --
 ## Slide Respository
-* A copy of these slides and sample code is available at: `https://github.com/UoM-ResPlat-DevOps/RegEx`
+* A copy of these slides and sample code is available at: `https://github.com/UoM-ResPlat-DevOps/SpartanRegEx`
 * A copy of information about HPC at the University of Melbourne is available at `https://dashboard.hpc.unimelb.edu.au`. See also `man spartan` on the cluster and the `/usr/local/common/` directories for more help and code exammples.
 * Help is available at: `hpc-support@unimelb.edu.au`. Other courses also conducted by Research Platforms.
 * Terminal projection via https://shellshare.net/
@@ -29,14 +29,14 @@ It is a perfect vehicle for hiding information.
 -- *Slide End* --
 
 -- *Slide* --
-## Part 1: What Are Regular Expressions?
-* First major computational use was in 1968 with pattern matching in the QED text editor and, independently in the same year, in compiler design. The regular expression system in QED was ported to `ed` in 1969.
-* Main tools for regular expressions are `grep` (1974), `sed` (1974), `awk` (1977), `perl` (1987) and `pcre` (1997).
+## Part 1: Chomsky Hierarchy
+<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/chomsky-hierarchy.png" /> 
 -- *Slide End* --
 
 -- *Slide* --
-## Part 1: Chomsky Hierarchy
-<img src="https://raw.githubusercontent.com/UoM-ResPlat-DevOps/SpartanRegEx/master/Images/chomsky-hierarchy.png" /> 
+## Part 1: What Are Regular Expressions?
+* First major computational use was in 1968 with pattern matching in the QED text editor and, independently in the same year, in compiler design. The regular expression system in QED was ported to `ed` in 1969.
+* Main tools for regular expressions are `grep` (1974), `sed` (1974), `awk` (1977), `perl` (1987) and `pcre` (1997).
 -- *Slide End* --
 
 -- *Slide* --

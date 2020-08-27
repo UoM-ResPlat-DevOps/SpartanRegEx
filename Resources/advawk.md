@@ -14,10 +14,10 @@ The shell function `eval` can be used for output e.g.,
 
 Integrating shell commands with awk for output.
 
-`eval $(echo 2 3 | awk '{ result=$1+$2; printf "result='\'%s\''\n", result }') 
+`eval $(echo 2 3 | awk '{ result=$1+$2; printf "result='\'%s\''\n", result }')` 
 `echo "$result"`
 
-`eval $(wc -l ./test-high-gc-1.fastq | awk '{ linecount=$1; printf "linecount='\'%s\''\n", linecount }')
+`eval $(wc -l ./test-high-gc-1.fastq | awk '{ linecount=$1; printf "linecount='\'%s\''\n", linecount }')`
 `echo "$linecount"`
 
 Any global variables and their values being used by awk can be accessed by the --dump-variables command, with a default filename of awkvars.out.
